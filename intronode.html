@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 2</title>
+</head>
+<body>
+    <!--REPL :- Read Eval Print Loop-->
+    <!--To apply this you have to open cmd and write node then-->
+    <!--to write var use repl.repl.ignoreUndefined=true
+        use do-while(...),while,for loop,functions,arithmetic operation,in-built math module-->
+    <!--REPL Commands
+        .help,.break,.clear,.load,.save,.exit,.editor,ctrl + c − terminate the current command,
+        ctrl + c(twice) − terminate the Node REPL,ctrl + d − terminate the Node REPL,_ underscore - To get last result-->
+
+    <!--CallBack Functions(Asynchronous Programming)-->
+    <!--Types are :- 1.setTimeout() 2.setInterval()-->
+
+    <!--File System (fs) Module  and  File System(fs) Module with Asynchronous :- var fs=require("fs");-->
+    <!--Methods :- .mkdirSync(""),.writeFileSync("",""),.appendFileSync("",""),.readFileSync(or"utf-8"),.renameSync("",""),
+                .unlinkSync()-->
+
+    <!--OS(Operating system) Module  :-   var os=require("os");-->
+    <!--Methods :- os.arch(),os.hostname(),os.platform(),os.tmpdir()-->
+
+    <!--Path Module  :-  var os=require("path");-->
+    <!--Methods :- pm.dirname("D:/LJ/abc.html"),pm.basename("D:/LJ/abc.txt"),pm.extname("D:/LJ/abc.txt"),pm.parse("D:/LJ/abc.html")-->
+
+    <!--HTTP Module  :-  var http = require('http');-->
+    <!--http.createServer(function (req, res) {
+        res.writeHead(200, {'Content-Type': 'text/html'});text/css,application/javascript,application/json,image/jpeg,image/png
+        res.write('Hello World!'); 
+        res.end(); 
+        }).listen(3120);-->
+
+
+    <p id="p"></p>
+    <script>
+        function mydisp(sum){
+            document.getElementById("p").innerHTML = sum;
+        }
+        function mydesk(a,b,myval){
+            sum = a+b;
+            myval(sum);
+        }
+        mydesk(5,10,mydisp);
+    </script>
+    <p id="demo" style="color:blue"></p>
+    <script>
+        size = 15;
+        function add() {
+            demo.innerHTML = "hello";
+            demo.style.fontSize = size;
+            if (size <= 50) {
+                size++;
+            }
+        }
+        setInterval(add, 100);
+    </script>
+
+    username:<input type="text">
+    password:<input type="password">
+    <input type="sumbit" value="submit">
+</body>
+</html>
