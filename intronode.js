@@ -78,3 +78,14 @@
 //             document.getElementById("demo").innerHTML = 'helloworld';},5000)</script>`)
 //     res.end()
 // }).listen(3007);
+
+
+// var d = require('./intronode1.js');
+// console.log(d(10,15));
+
+// var d1 = require('./intronode1.js');
+// console.log(d1.s(10,15));
+// console.log(d1.m(10,15));
+
+var {s,m} = require('./intronode1.js');
+console.log(s(1,15));
