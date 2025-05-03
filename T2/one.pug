@@ -1,0 +1,60 @@
+html
+    head
+        title hello
+    body
+        //- h1 LJU 
+        //- p 
+        //-     i lets learn pug 
+        //- p 
+        //-     i Thank you
+        //- h6(style="color:pink") LJU
+        //- h6 The file will not properly if the programmer does not make sure of proper destination
+        //- ul
+        //-     li Mango
+        //-     li Watermelon
+        //-     li Pineapple
+        //- h5(style="color:red") Hello
+        //- a(href='/about',target="_blank")|about
+        //- table(border="1px solid",style="color:red;cell-spacing:0px")
+        //-     tr 
+        //-         td name 
+        //-         td id 
+        //-     tr 
+        //-         td abc 
+        //-         td 1
+        //- -var number = 2
+        //- -var color = 'black'
+        //- -var list = ['India','USA','UK']
+        //- h5= "3 times number is "+number*3
+        //- h3= "I Like " + color + " color"
+        //- h3= "Country: " + list[2]
+        //- ul 
+        //-     li 1
+        //-     li 2
+        //-     li 3
+        //-     li 4
+
+        //- form(action="/data",method="get")
+        //-     label Enter Your Name
+        //-     input(type="text", name="name")
+        //-     label Enter Your Email
+        //-     input(type="email", name="email")
+        //-     input(type="submit",value="Submit")
+
+        //- h1 #{msg}
+        //- h2 #{name}
+        //- h3(style="color:red") #{id}
+
+        form(action="/data",method="get")
+            label Enter Your Name
+            input(type="text", name="name")
+            label Enter Your Email
+            input(type="email", name="email")
+            label Course
+            input(type="radio", name="course", value="IT",id="IT") 
+            |IT
+            input(type="radio", name="course", value="CE",id="CE") 
+            |CE
+            input(type="radio", name="course", value="CSE",id="CSE") 
+            |CSE
+            input(type="submit",value="Submit")

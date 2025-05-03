@@ -1,0 +1,36 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Program 1</title>
+</head>
+<body>
+    <!--Express JS        const expr = require('express'); const app = expr();-->
+    <!--Method are :- 1.post 2.get 3.delete 4.put 5.all (app.METHOD(path,handler))-->
+    <!--Methods of REQ are :- 1.params-->
+    <!--Methods of RES are :- 1.set 2.write 3.send 4.end 5.json 6.render 7.redirect 8.sendFile 9.status 10.use-->
+    <!--if we use res.write() then res.send() must be blank-->
+
+    <!--Link HTML,CSS,JS Files-->
+    <!--Methods are 1.all in 1('./') 2.distributed('../public') 3.non-logic file in folder('public') 
+        4.logic file in folder('../')-->
+
+    <!--Get(only limited/in header) and Post Method(large/in body)-->
+    <!--for post use app.use(expr.urlencoded({extended:false}))  true=qs and flase=querystring-->
+
+    <!--Middleware-->
+    <!--next() function is used-->
+
+    <!--Cookie   const cookieParser = require('cookie-parser') & app.use(cookieParser())-->
+    <!--Stored at client side, destroy when page close, key-value pair data as identifier, less secure, faster as store 
+        locally, store user preference data-->
+    <!--Methods are :- 1.res.cookie("","") 2.res.clearCookie("") 3.req.cookies-->
+    
+    <!--Session   const sess=require("express-session") & app.use(sess({resave:false/true,saveUninitialized:false/true,
+                                                                    secret:"LJU123",cookie:{maxAge:10000}}))-->
+    <!--Stored at server side, destroy when user logout, session-id as identifier, more secure, slower due to server 
+        interaction, store user-specific data-->
+    <!--Methods are :- req.session.pv(or anything)-->
+
+</body>
+</html>
