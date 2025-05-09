@@ -10,9 +10,16 @@
     <!--Unbuffered Code vs Buffered Code, Buffered Comments vs Unbuffered Comments vs Multiline Comments-->
 
     <!--File Upload & Multer-->
-    <!--File Info :- fieldname,originalname,encoding,mimetype,size,destination,filename,path-->
+    <!--File Info :- fieldname,originalname,encoding,mimetype,size,destination,filename,path & opts are :- dest/storage,
+                    fileFilter,limits,preservePath-->
     <!--enctype="multipart/form-data" must write in form-->
-    <!--Methods are :- .diskStorage(),.single(fieldname),.array(fieldname[, maxCount])-->
+    <!--Methods are :- .diskStorage({destination,filename}),.single(fieldname),.array(fieldname[, maxCount])-->
+
+    <!--REST(Representational State Transfer) APIs-->
+    <!--const router = expr.Router()-->
+
+    <!--Mail send-node mailer     nm=require("nodemailer")-->
+    <!--Methods are :- .createTransport({service,host,port,secure,auth{user,pass}}),sendMail({from,to,cc,bcc,subject,text,html,attachment},cb) -->
     
 </body>
 </html>

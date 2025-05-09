@@ -1,3 +1,4 @@
+//pug
 const expr = require('express');
 const app = expr();
 // app.set('view engine','pug');
@@ -41,16 +42,60 @@ const app = expr();
 
 
 //File Upload
-multer = require('multer');
-var store = multer.diskStorage({destination:'single',filename:(req,file,cb)=>{cb(null,file.originalname)}});
-var upload = multer({storage:store}).single('myfile');
-app.use(expr.static('../Public',{index:'index.html'}));
-app.post('/data',upload,(req,res)=>{
-    if(req.file){
-        res.send(`<h1>File ${req.file.originalname} is uploaded in ${req.file.destination}`);
+// multer = require('multer');
+// var store = multer.diskStorage({destination:'single',filename:(req,file,cb)=>{cb(null,file.originalname)}});
+// var upload = multer({storage:store}).single('myfile');
+// app.use(expr.static('../Public',{index:'index.html'}));
+// app.post('/data',upload,(req,res)=>{
+//     if(req.file){
+//         res.send(`<h1>File ${req.file.originalname} is uploaded in ${req.file.destination}`);
+//     }
+//     else {
+//         res.status(400).send('File upload failed.');
+//     }    
+// });
+// app.listen(3007);
+
+// multer = require('multer');
+// var store = multer.diskStorage({destination:'single',filename:(req,file,cb)=>{cb(null,file.originalname)}});
+// var upload = multer({storage:store}).array('myfile',5);
+// app.use(expr.static('../Public',{index:'index.html'}));
+// app.post('/data',upload,(req,res)=>{
+//     if(req.files){
+//         for(i of req.files){
+//             res.write(`<h1>file ${i.originalname} is uploaded in ${i.destination}`);
+//         }
+//         res.send();
+//     }
+// });
+// app.listen(3007);
+
+
+//Restful APIs
+// app.use('/',m);
+// app.listen(3007);
+
+// var m = require('./data');
+// app.use('/',m);
+// app.listen(3007);
+
+
+//node-mailer
+var nm = require('nodemailer');
+var cm = nm.createTransport({host:'smtp.gmail.com',
+                            port:465,
+                            auth:{user:"tithiashra@gmail.com",pass:'tithi@2005'}
+                        });
+var mailoption = {from:"tithiashra@gmail.com",
+                to:"ashratithi@gmail.com",
+                subject:"hello test",
+                text:"node mailer",
+            };
+cm.sendMail(mailoption,(err,info)=>{
+    if(err){
+        console.log(err);
     }
-    else {
-        res.status(400).send('File upload failed.');
-    }    
+    else{
+        console.log(info);
+    }
 });
-app.listen(3007);
