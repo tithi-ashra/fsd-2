@@ -1,0 +1,21 @@
+insert 3 students with provide keys stu_id,name,dept,cgpa,admission date, record must contain one entry having cgpa>9 and 
+use new date(yyyy-mm-dd) format for inserting record and perform following query
+1. update graduate true for the students admitted before 2021-01-01
+	db.Students.updateMany({admissionDate:{$lt:'2021-01-01'}},{$set:{graduated:'true'}})
+2. delete a student with cgpa<5 and graduate true
+	db.Students.deleteMany({$and:[{cgpa:{$lt:5}},{graduated:{$eq:true}}]})
+3. find cs student admiited in 2022 return stuid,name,adm_Date
+	db.Students.find({dept:'cs',admissionDate:{$gt:new Date('2021-12-31'),$lt:new Date('2022-12-31')}},{studentId:1,name:1,admissionDate:1,_id:0})
+4. find first 3 rank students with name (*add rank1,2,3 for that particular student)
+	db.Students.find({},{_id:0,name:1}).sort({name:-1}).limit(3)
+
+
+{
+  _id: ObjectId("6868a3b8d58b5e59cdaeece0"),
+  name: 'jeet',
+  subjects: ['fsd','python'],
+  items: [
+    {product: 'pen',qty: 10},
+    {product: 'notebook',qty: 20}]
+}
+db.demo.find({'items.product':'pen'},{_id:0,items:1})

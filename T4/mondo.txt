@@ -1,0 +1,37 @@
+Task-1
+1. db.student.find({age:{$gt:5}},{name:1,_id:0})
+2. db.student.updateMany({},{$inc:{std:1}})
+3. db.student.find().sort({age:-1})
+4. db.student.find({},{_id:0,name:1}).sort({age:-1}).limit(1)
+5. db.student.deleteMany({std:12})
+
+Task-2
+1. db.product.find({cat:'mobile'},{_id:0,brand:1,price:1})
+2. db.product.updateMany({brand:'samsung'},{$inc:{price:1000}})
+3. db.product.updateMany({brand:'vivo'},{$set:{quantity:5}},{upsert:true})
+4. db.product.find({$or:[{brand:'vivo'},{brand:'oppo'}]},{_id:0,price:1})
+5. db.product.find({price:{$gte:30000,$lt:80000}},{_id:0,brand:1,cat:1})
+
+Task-3
+1. db.student1.updateMany({age:20},{$set:{name:'JJJ',age:40}},{upsert:true})
+2. db.student1.find({name: {$in: ['YYY', 'SSS']}}, {_id: 0})
+				or
+   db.student1.find({$or:[{name:'YYY'},{name:'SSS'}]},{_id:0})
+
+Task-4
+1. db.employees.find()
+2. db.employees.find({position:'Full Stack Developer'})
+3. db.employees.find({age:{$gte:25,$lte:40}},{_id:0,name:1})
+4. db.employees.find({},{_id:0,name:1}).sort({salary:-1}).limit(1)
+5. db.employees.find({salary:{$gte:50000}})
+6. db.employees.find({},{_id:0,name:1,position:1})
+7. db.employees.find({salary:{$gte:50000}}).count()
+8. db.employees.find({$or:[{position:'Software Developer'},{position:'Full Stack Developer'},{age:{$lt:30}}]})
+9. db.employees.updateMany({salary:{$lt:50000}},{$mul:{salary:1.1}})
+10. db.employees.deleteMany({age:{$gt:50}})
+11. db.employess.updateMany({position:'Data Scientist'},{$mul:{salary:1.05}})
+12. db.employees.find({name:{$regex:/an/}},{_id:0,name:1})
+13. db.employees.find({name:{$regex:/Eri/i}},{_id:0,name:1})
+14. db.employees.find({name:{$regex:/ric/}},{_id:0,name:1})
+15. db.employees.find({name:{$regex:/^[a-z]{4,5}$/i}},{_id:0,name:1})
+16. db.employees.find({name:{$regex:/[0-9]$/i}},{_id:0,name:1})
